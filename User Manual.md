@@ -41,7 +41,7 @@ See also Character rig and Animation specs
 
 ## Character setup
 
-In the content browser
+In the Unreal Engine content browser
 - Create a character based on the C++ class "MotCharacter" and give it a suitable name.
 - Create an animation blueprint, based on a “regular” animation instance.
 - In the “Mesh” section of your blueprint instance of your character, specify the skeletal mesh and the animation blueprint, which uses the same skeletal mesh and includes the motion matching node in its animgraph.
