@@ -7,8 +7,6 @@
   - [Animation iteration & Debug HUD](#animation-iteration--debug-hud)
   - [Terminology](#terminology)
 
-Testing
-
 # Intro to useage
 
 ## Multiple Motion Fields per Character
