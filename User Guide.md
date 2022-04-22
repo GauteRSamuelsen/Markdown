@@ -2,17 +2,66 @@
 
 - [User Guide](#user-guide)
 - [Intro to useage](#intro-to-useage)
-  - [Multiple Motion Fields per Character](#multiple-motion-fields-per-character)
   - [Tag System](#tag-system)
   - [Animation iteration & Debug HUD](#animation-iteration--debug-hud)
   - [Terminology](#terminology)
+  - [Motion Matching Node in animation blueprints](#motion-matching-node-in-animation-blueprints)
 
 # Intro to useage
 
-## Multiple Motion Fields per Character
+This is a guide from working with the system in unreal. This document is meant to help iterate and improve the animation quality of a system that is already set up and running.
 
 ## Tag System
 
+The tag system works by “dividing” the animation into the set time steps of the Motion Field. When the "tag” is red, it is selected, and white de-selected. When the timeline below is added to the “tags to ignore” function in the motion matching node in the animation blueprint, the motion matching will ignore animations from about frame 105 to 120.
+
+A part of the motion matching system is giving away absolute control over animations to an algorithm, so to yield the best results, curation of the animations is important. By selectively limiting the searching points of the algorithm it can pick visually better results. Tagging the animations can also be used to stop repeated picking of animations. If a character stutters during a turn or is stuck in a loop of animations, putting a ignore tag on it will keep it out of the searching process.
+
+![Example of motion field Tag Timeline](./UsePictures/TagTimeline.png "Picture of motion field's set properties panel")
+
+In the animation blueprint you need to specify what tags to look for and what tags to ignore.
+
+![Example of tag system in animation blueprint](./UsePictures/SpecifyTags.png "Picture of tag system in animation blueprint")
+
+> In this example case, the ignore has tag index 0 and prefer has tag index 1
+
 ## Animation iteration & Debug HUD
 
+A tool to aid in this is the debug hud. You can toggle this when running the editor in a level by hitting the “m” key. The arrows-boxes below the "motionfield name" can be used to debug different motion fields in the scene. It is advised to debug motion characters one by one, so there are few characters in the scene and you can quickly identify the character with the motion field you seek info on. You can use the debug while playing to test simple things, but it could be smart to do some screen recording to be able to view frame by frame and analyze situations.
+
+The hud shows three important debug info: The animation name, the timestep it has jumped to, and how good of a match it was to the previous animation pose. The lower the number in “Animation match” the better it matched the previous pose.
+
+> A high animation match number between two pieces of animation does not necessarily mean a poor visual result, so using some intuition and analysis of the transitions is needed to not animate every time the animation match is high, but only when truly needed.
+
+Working with the tag system as well can improve the visual results. Even given all beautiful frames of animation the context in which they are chosen dynamically can single out transitions and selections that don’t flow well together. Giving the motion matching “preferred” frames and frames to ignore can aid in its selection. This "micro" curation can be used to avoid playing the same few frames of animations over and over, as well as characters stuck in poses.
+
+![Example of the debug hud](./UsePictures/DebugHUD.png "Picture of the debug hud")
+
 ## Terminology
+
+- Motion Matching - Searches through a database of animations to find the pieces of animation that best suit the current skeletal position and match against a future “goal”. In unreal, works as a “Replacement” of animation state machines. 
+- Database - A database is an organized collection of structured information, or data,
+- Motion field - Database of animations. Searched through by the motion matching algorithm.
+- Motion field editor - Custom unreal editor to edit the database of animations
+- Motion field timestep - How many times to sample the animations per second. The timestep determines how many points are available to jump to and how granular you can set tags.
+Animation tags - A way to inform the system of how to handle frames of animations. F.eks “ignore” or “prefer” tags will influence the final result of the animation output.
+- Root bone - First bone/socket in animation skeleton
+- Root motion - Animated positional offset in animation, our system needs root motion to “move” the character about in the scene.
+- Animation time - The timestep the animation the system picked to “jump to”
+- Animation match - A “score” of high well the new animation matches the current position of the skeleton. Lower is better, but higher is not necessarily bad visually.
+- Micro - Small scale, moment to moment.
+- Macro - Big scale, broad strokes.
+- UUS - Unreal Unit Speed. Movement speed.
+
+## Motion Matching Node in animation blueprints
+
+![Example of the debug hud](./UsePictures/MotionMatchingNode.png "Picture of the debug hud")
+
+- Desired Trajectory - Input of Motion Matching Goal. What transform is the system aiming to match to.
+- Responsivness - 
+- Velocity strength - Adjust the velocity % of speed. If you want the character velocity to differ from the one “animated” into the root motion bone of the animations
+- Pose Strength - 
+- Blend Time - How long to blend between old and new pose. Setting to 0 will show how often system pick different animations. Tuning and finding the right number for the animation set and character set is hugely important.
+- Play Rate - Speed of animations.
+- Change Time Limit - How often the system allows swapping between animations. Lower number is more responsive, but more “choppy” visually. Tuning this number has huge impact on visual output and responsiveness
+- Max Changes - How many changes are allowed in the Change Time Limit duration. Huge impact on output.

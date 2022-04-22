@@ -79,7 +79,7 @@ When the properties are set, and animations imported, click “ProcessAll”, an
 
 In the animation blueprint editor, right-click and create a motion matching node. Click the Motion Matching node, then enter the details panel on the right and select the desired Motion Field for the character.
 
-![Example of for motion field "Set properties"](./SetupPictures/AnimationBlueprintAnimGraph.png "Picture of motion field's set properties panel")
+![Example of motion field "Set properties"](./SetupPictures/AnimationBlueprintAnimGraph.png "Picture of motion field's set properties panel")
 
 > In the animation blueprint’s “Root Motion mode” setting, selecting “Root motion from everything” makes the character move in the game-scene using the root motion data. But if you want to move the character using other code, then ignoring root motion will make the system animate, but not move the character in the scene. With “Root motion from everything” the system will find animations to get the character to the “goal” built in character blueprint.
 
@@ -93,7 +93,7 @@ This type of logic can also be used for example when jumping, strafing or when u
 
 > Example of simple blending logic
 
-![Example of for motion field "Set properties"](./SetupPictures/MultipleMotionFieldsExample.png "Picture of motion field's set properties panel")
+![Example of multiple motion fields for one character](./SetupPictures/MultipleMotionFieldsExample.png "Picture of multiple motion fields for one character")
 
 ## Event graph setup
 
