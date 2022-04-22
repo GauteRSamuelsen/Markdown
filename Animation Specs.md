@@ -4,7 +4,7 @@
 
 The character rig needs to have a “root”-bone. This root bone needs to have root motion, basically that the character moves through the scene and is not animated in place. The root bone is used by the motion matching system to have a character transform to match current skeletal positions against possible transitinos.
 
-![Example of character rig hierarchy](./Pictures/Rootbone.png "Example of character rig hierarchy")
+![Example of character rig hierarchy](./Pictures/RootBone.png "Example of character rig hierarchy")
 
 Every animation sequence in Unreal Engine needs to have "Enable Root Motion" enabled under the "Root Motion" category.
 
