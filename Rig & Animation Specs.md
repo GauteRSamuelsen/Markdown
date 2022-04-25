@@ -18,7 +18,7 @@ Every animation sequence in Unreal Engine needs to have "Enable Root Motion" ena
 
 When working with a limited set of animations you need to be quite exact in making the animation fit the needed character locomotion in the game-scene. Matching movement speed, turning capabilites and using the debug info to add more targeted animations where needed to get good coverage.
 
-The system “prefers” longer sets of animations, to calculate velocity and speed. For example, avoid 1 second animations, but limit them to about 10-15 seconds. Having multiple 10-15 second animations gives insight into what the system is picking in a more easily readable way, given good naming conventions.
+The system “prefers” longer sets of animations, to calculate velocity and speed. For example, avoid 1 second animations, but limit them to about 10-15 seconds. Having multiple 10-15 second animations gives insight into what the system is picking in a more easily readable way, given good naming conventions. If animations become too long it is also more difficult to organize & tag precisely, especially on smaller & low-res screens/monitors.
 
 Think of creative ways to maximise animation data. Mirroring animations and providing variances give the system more animation data to pull from.
 

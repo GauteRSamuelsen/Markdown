@@ -2,18 +2,7 @@
 
 ## Table of contents
 
-- [User Manual - Unreal Engine mation Matching plugin](#user-manual---unreal-engine-mation-matching-plugin)
-  - [Table of contents](#table-of-contents)
-  - [Intro to setup](#intro-to-setup)
-    - [Plugin contains](#plugin-contains)
-  - [Character setup](#character-setup)
-  - [Event graph character setup](#event-graph-character-setup)
-  - [Motion field setup](#motion-field-setup)
-    - [Adding animations](#adding-animations)
-  - [Animation Blueprint setup](#animation-blueprint-setup)
-  - [Multiple Motion Fields per Character](#multiple-motion-fields-per-character)
-  - [Event graph setup](#event-graph-setup)
-  - [Debug hud setup](#debug-hud-setup)
+Markdown arguing here, wont create the table of contents.
 
 ## Intro to setup
 
@@ -29,6 +18,12 @@ Start by importing the Motion Matching plugin into Unreal Engine. For now the pl
 
 > See also documents regarding Character rig and Animation specs & User guide.
 
+## Unreal Input setup
+
+Input mapping used in our project settings.
+
+![Example of input setup](./SetupPictures/InputMap.png "Picture of unreal engine input setup")
+
 ## Character setup
 
 In the Unreal Engine content browser
@@ -42,7 +37,14 @@ In the Unreal Engine content browser
 
 ## Event graph character setup
 
-WIP
+In the event graph for the character, the most important part is feeding the motion matching algorithm a target location. The motion matching goal will be the location the system moves towards. This becomes a moving target whenever the player starts moving.
+
+> This example is for a player-driven character, but replacing the input would make it work for npc's.
+
+![Example of character eventgraph setup](./SetupPictures/CharEventGraph.png "Picture of character eventgraph setup")
+
+> Visualizing the input in the game-scene is also a great idea and can be done like this after the goal is built.
+> ![Example of character eventgraph setup](./SetupPictures/CharInputVis.png "Picture of character eventgraph setup")
 
 ## Motion field setup
 
@@ -62,7 +64,7 @@ Feel free to experiment further with this. If you have a huge set of data, for e
 
 > If the character does not appear in the motion field. Place an animation asset with the skeletal mesh you want to create a Motion Field of in a game-scene.
 
-### Adding animations
+## Adding animations
 
 In the “Motion Field editor” click the button to the right, “Add an animation”. Select the animations you want the character to be able to pull from and use in-game. Grouping motion fields by “state” is a good idea to organize and get ideal results. “Macro” curation of animations is talked about later. But for now grouping motion fields by idle/walk, jumping, climbing, and running makes sure you get the expected animations for the different states.
 
@@ -83,6 +85,14 @@ In the animation blueprint editor, right-click and create a motion matching node
 
 > In the animation blueprint’s “Root Motion mode” setting, selecting “Root motion from everything” makes the character move in the game-scene using the root motion data. But if you want to move the character using other code, then ignoring root motion will make the system animate, but not move the character in the scene. With “Root motion from everything” the system will find animations to get the character to the “goal” built in character blueprint.
 
+## Animation blueprint event graph setup
+
+The animation blueprint event graph really only needs to do a couple of things.
+- Get a reference to the blueprint instance of itself
+- Get and update the motion matching target
+
+![Example of motion field "Set properties"](./SetupPictures/AnimationEventGraph.png "Picture of motion field's set properties panel")
+
 ## Multiple Motion Fields per Character
 
 To create more “states” of animation it is advised to create more motion fields per character and switch/blend between them as needed. For example in the animation blueprint to have multiple motion matching nodes, and switch between them using logic from the character controller.
@@ -95,10 +105,8 @@ This type of logic can also be used for example when jumping, strafing or when u
 
 ![Example of multiple motion fields for one character](./SetupPictures/MultipleMotionFieldsExample.png "Picture of multiple motion fields for one character")
 
-## Event graph setup
-
-WIP
-
 ## Debug hud setup
 
-WIP
+To toggle the debug hud, this can be included into the level blueprint to create a toggle using "m" or your own input setup.
+
+![Debug HUD Blueprint](./SetupPictures/HUDSetup.png "Picture of HUD setup blueprint")

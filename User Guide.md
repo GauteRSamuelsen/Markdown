@@ -51,7 +51,7 @@ Animation tags - A way to inform the system of how to handle frames of animation
 - Animation match - A “score” of high well the new animation matches the current position of the skeleton. Lower is better, but higher is not necessarily bad visually.
 - Micro - Small scale, moment to moment.
 - Macro - Big scale, broad strokes.
-- UUS - Unreal Unit Speed. Movement speed.
+- UUS - Unreal Unit Speed/Second. Movement speed.
 
 ## Motion Matching Node in animation blueprints
 
