@@ -43,6 +43,9 @@ In the event graph for the character, the most important part is feeding the mot
 
 ![Example of character eventgraph setup](./SetupPictures/CharEventGraph.png "Picture of character eventgraph setup")
 
+> To control camera, place these nodes anywhere in the character event graph blueprint.
+![Example of character camera eventgraph setup](./SetupPictures/CameraInput.png "Picture of character camera eventgraph setup")
+
 > Visualizing the input in the game-scene is also a great idea and can be done like this after the goal is built.
 > ![Example of character eventgraph setup](./SetupPictures/CharInputVis.png "Picture of character eventgraph setup")
 
