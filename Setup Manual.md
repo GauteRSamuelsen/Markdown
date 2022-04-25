@@ -27,7 +27,7 @@ Start by importing the Motion Matching plugin into Unreal Engine. For now the pl
 - Motion Field - “database” and editor-window
 - Motion Matching node for animation blueprints
 
-See also Character rig and Animation specs
+> See also documents regarding Character rig and Animation specs & User guide.
 
 ## Character setup
 
