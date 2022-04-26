@@ -1,3 +1,5 @@
+Return to [front page](./README.md).
+
 # Character rig & Animation guide
 
 ## Character rig requirements
@@ -27,3 +29,5 @@ Think of creative ways to maximise animation data. Mirroring animations and prov
 ![Example of spiral-animation](./RigPictures/AnimationSpiral.png "Picture of a character walking along a spiral")
 
 Also think of creative ways to “combine” sets of animations. Another one of our examples is a looped crouched walking animation can become anticipation for a jump, if only played for a short while before the jump.
+
+Return to [front page](./README.md).

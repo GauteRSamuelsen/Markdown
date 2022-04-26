@@ -1,3 +1,5 @@
+Return to [front page](./README.md).
+
 # User Guide
 
 - [User Guide](#user-guide)
@@ -64,3 +66,5 @@ Animation tags - A way to inform the system of how to handle frames of animation
 - Play Rate - Speed of animations.
 - Change Time Limit - How often the system allows swapping between animations. Lower number is more responsive, but more “choppy” visually. Tuning this number has huge impact on visual output and responsiveness
 - Max Changes - How many changes are allowed in the Change Time Limit duration. Huge impact on output.
+
+Return to [front page](./README.md).

@@ -1,3 +1,5 @@
+Return to [front page](./README.md).
+
 # User Manual - Unreal Engine mation Matching plugin
 
 ## Table of contents
@@ -113,3 +115,5 @@ This type of logic can also be used for example when jumping, strafing or when u
 To toggle the debug hud, this can be included into the level blueprint to create a toggle using "m" or your own input setup.
 
 ![Debug HUD Blueprint](./SetupPictures/HUDSetup.png "Picture of HUD setup blueprint")
+
+Return to [front page](./README.md).
