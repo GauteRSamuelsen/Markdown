@@ -2,7 +2,7 @@
 
 This is a documentation branch for another project. It is a User manual, tech specs and guides for how to set up a motion matching animation system in unreal.
 
-The documents are categorized loosely by what person/professional might need to use them, but reading them all does no harm.
+The documents are categorized loosely by what person/professional might need to use them, but reading them all might give a better overview of features, possibilities and aid in communication.
 
 # Documents
 
