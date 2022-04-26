@@ -12,6 +12,8 @@ This guide will help you get a basic player-controlled character, animated using
 
 Start by importing the Motion Matching plugin into Unreal Engine. For now the plugin supports Unreal Engine version 4.27.2.
 
+Unreal has this documentation for Unreal 5 - but it should apply to 4.27 as well. https://docs.unrealengine.com/5.0/en-US/working-with-plugins-in-unreal-engine/
+
 ### Plugin contains
 
 - MotCharacter - character class
