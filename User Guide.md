@@ -19,9 +19,8 @@ A part of the motion matching system is giving away absolute control over animat
 
 ![Example of motion field Tag Timeline](./UsePictures/TagTimeline.png "Picture of motion field's set properties panel")
 
-In the animation blueprint you need to specify what tags to look for and what tags to ignore.
-
-![Example of tag system in animation blueprint](./UsePictures/SpecifyTags.png "Picture of tag system in animation blueprint")
+> In the animation blueprint you need to specify what tags to look for and what tags to ignore.
+> ![Example of tag system in animation blueprint](./UsePictures/SpecifyTags.png "Picture of tag system in animation blueprint")
 
 > In this example case, the ignore has tag index 0 and prefer has tag index 1
 
