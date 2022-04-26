@@ -38,6 +38,10 @@ Working with the tag system as well can improve the visual results. Even given a
 
 ![Example of the debug hud](./UsePictures/DebugHUD.png "Picture of the debug hud")
 
+## Some common troubleshooting tips
+
+- If the character is not moving in the scene when it should, try increasing movement speed.
+
 ## Terminology
 
 - Motion Matching - Searches through a database of animations to find the pieces of animation that best suit the current skeletal position and match against a future “goal”. In unreal, works as a “Replacement” of animation state machines. 

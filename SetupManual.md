@@ -1,6 +1,6 @@
 Return to [front page](./README.md).
 
-# User Manual - Unreal Engine mation Matching plugin
+# User Manual - Unreal Engine motion matching plugin
 
 ## Table of contents
 
