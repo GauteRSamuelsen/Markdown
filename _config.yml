@@ -6,9 +6,9 @@ relative_links:
 include:
   - CONTRIBUTING.md
   - README.md
-  - Rig & Animation Specs.md
-  - Setup Manual.md
-  - User Guide.md
+  - RigAndAnimationSpecs.md
+  - SetupManual.md
+  - UserGuide.md
   - LICENSE.md
   - COPYING.md
   - CODE_OF_CONDUCT.md
