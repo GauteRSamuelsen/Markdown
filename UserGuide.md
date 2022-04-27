@@ -1,6 +1,6 @@
-Return to [front page](./README.md).
-
 # User Guide
+
+Return to [front page](./README.md).
 
 - [User Guide](#user-guide)
 - [Intro to useage](#intro-to-useage)
@@ -9,7 +9,7 @@ Return to [front page](./README.md).
   - [Terminology](#terminology)
   - [Motion Matching Node in animation blueprints](#motion-matching-node-in-animation-blueprints)
 
-# Intro to useage
+## Intro to useage
 
 This is a guide from working with the system in unreal. This document is meant to help iterate and improve the animation quality of a system that is already set up and running.
 
@@ -43,7 +43,7 @@ Working with the tag system as well can improve the visual results. Even given a
 
 ## Terminology
 
-- Motion Matching - Searches through a database of animations to find the pieces of animation that best suit the current skeletal position and match against a future “goal”. In unreal, works as a “Replacement” of animation state machines. 
+- Motion Matching - Searches through a database of animations to find the pieces of animation that best suit the current skeletal position and match against a future “goal”. In unreal, works as a “Replacement” of animation state machines.
 - Database - A database is an organized collection of structured information, or data,
 - Motion field - Database of animations. Searched through by the motion matching algorithm.
 - Motion field editor - Custom unreal editor to edit the database of animations
@@ -62,12 +62,12 @@ Animation tags - A way to inform the system of how to handle frames of animation
 ![Example of the debug hud](./UsePictures/MotionMatchingNode.png "Picture of the debug hud")
 
 - Desired Trajectory - Input of Motion Matching Goal. What transform is the system aiming to match to.
-- Responsivness - 
+- Responsivness -
 - Velocity strength - Adjust the velocity % of speed. If you want the character velocity to differ from the one “animated” into the root motion bone of the animations
-- Pose Strength - 
+- Pose Strength -
 - Blend Time - How long to blend between old and new pose. Setting to 0 will show how often system pick different animations. Tuning and finding the right number for the animation set and character set is hugely important.
 - Play Rate - Speed of animations.
 - Change Time Limit - How often the system allows swapping between animations. Lower number is more responsive, but more “choppy” visually. Tuning this number has huge impact on visual output and responsiveness
 - Max Changes - How many changes are allowed in the Change Time Limit duration. Huge impact on output.
 
-Return to [front page](./README.md).
+Return to [front page](./README.md)

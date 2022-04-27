@@ -1,6 +1,6 @@
-Return to [front page](./README.md).
-
 # User Manual - Unreal Engine motion matching plugin
+
+Return to [front page](./README.md).
 
 ## Table of contents
 
@@ -30,7 +30,8 @@ Input mapping used in our project settings.
 
 ## Character setup
 
-In the Unreal Engine content browser
+In the Unreal Engine content browser:
+
 - Create a character based on the C++ class "MotCharacter" and give it a suitable name.
 - Create an animation blueprint, based on a “regular” animation instance.
 - In the “Mesh” section of your blueprint instance of your character, specify the skeletal mesh and the animation blueprint, which uses the same skeletal mesh and includes the motion matching node in its animgraph.
@@ -47,11 +48,9 @@ In the event graph for the character, the most important part is feeding the mot
 
 ![Example of character eventgraph setup](./SetupPictures/CharEventGraph.png "Picture of character eventgraph setup")
 
-> To control camera, place these nodes anywhere in the character event graph blueprint.
-![Example of character camera eventgraph setup](./SetupPictures/CameraInput.png "Picture of character camera eventgraph setup")
+> If you have a camera-arm and camera on your player and want to control camera, place these nodes anywhere in the character event graph blueprint. ![Example of character camera eventgraph setup](./SetupPictures/CameraInput.png "Picture of character camera eventgraph setup")
 
-> Visualizing the input in the game-scene is also a great idea and can be done like this after the goal is built.
-> ![Example of character eventgraph setup](./SetupPictures/CharInputVis.png "Picture of character eventgraph setup")
+> Visualizing the input in the game-scene is also a great idea and can be done like this after the goal is built. ![Example of character eventgraph setup](./SetupPictures/CharInputVis.png "Picture of character eventgraph setup")
 
 ## Motion field setup
 
@@ -67,8 +66,9 @@ When creating, follow the prompts and create the Motion Field based on the skele
 
 If you have a limited or only want to test functionality, select few or no motion bones to debug the system.
 For a “normal” amount of animation data, selecting the two feet yields good results.
-Feel free to experiment further with this. If you have a huge set of data, for example with motion capture data, then selecting the hip and or neck bone might yield exceptional results. 
+Feel free to experiment further with this. If you have a huge set of data, for example with motion capture data, then selecting the hip and or neck bone might yield exceptional results.
 
+> Note/bug
 > If the character does not appear in the motion field. Place an animation asset with the skeletal mesh you want to create a Motion Field of in a game-scene.
 
 ## Adding animations
@@ -77,12 +77,12 @@ In the “Motion Field editor” click the button to the right, “Add an animat
 
 ![Example of for motion field editor](./SetupPictures/AddAnimation.png "Picture of motion field editor")
 
-To edit how granular and how many motion keys(animation poses) you want the database to sample click on the “Set properties” button. A good starting value is 0,1. The smaller the number, the more samples to pull from and the larger the data-set becomes. A higher number leaves fewer points for the motion matching to match against, and can result in choppier transitions.
+To edit how granular and how many motion keys(animation poses) you want the database to sample click on the “Set properties” button. A good starting value is 0,1. The smaller the number, the more samples to pull from and the larger the data-set becomes. A higher number leaves fewer points for the motion matching to match against, and can result in poor animation quality.
 A limitation of the system is that the tagging part of it only tags in motion steps, not to actual frames of animation. A smaller timestep means more precision and better results, but can be a bit cluttered and difficult to “read”, especially on smaller screen sizes.
 
 ![Example of for motion field "Set properties"](./SetupPictures/SetProperties.png "Picture of motion field's set properties panel")
 
-When the properties are set, and animations imported, click “ProcessAll”, and the Motion Field is ready for use. For the character to animate, the animation blueprint motion matching node needs to know what motion field to pull from. This is the next step.
+When the properties are set, and animations imported, click “ProcessAll”, and the Motion Field is ready for use. For the character to animate, the animation blueprint motion matching node needs to know what motion field to pull from.
 
 ## Animation Blueprint setup
 
@@ -95,8 +95,9 @@ In the animation blueprint editor, right-click and create a motion matching node
 ## Animation blueprint event graph setup
 
 The animation blueprint event graph really only needs to do a couple of things.
+
 - Get a reference to the blueprint instance of itself
-- Get and update the motion matching target
+- Get and update the motion matching goal
 
 ![Example of motion field "Set properties"](./SetupPictures/AnimationEventGraph.png "Picture of motion field's set properties panel")
 
@@ -118,4 +119,4 @@ To toggle the debug hud, this can be included into the level blueprint to create
 
 ![Debug HUD Blueprint](./SetupPictures/HUDSetup.png "Picture of HUD setup blueprint")
 
-Return to [front page](./README.md).
+Return to [front page](./README.md)

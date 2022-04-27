@@ -1,6 +1,6 @@
-Return to [front page](./README.md).
-
 # Character rig & Animation guide
+
+Return to [front page](./README.md).
 
 ## Character rig requirements
 
@@ -22,12 +22,16 @@ When working with a limited set of animations you need to be quite exact in maki
 
 The system “prefers” longer sets of animations, to calculate velocity and speed. For example, avoid 1 second animations, but limit them to about 10-15 seconds. Having multiple 10-15 second animations gives insight into what the system is picking in a more easily readable way, given good naming conventions. If animations become too long it is also more difficult to organize & tag precisely, especially on smaller & low-res screens/monitors.
 
+> ![Example of too long animation on small screen](./RigPictures/CrampedTimeline.png "Picture of too long animation on small screen")
+> Picture above about 1800 frames of animation. Picture below split into 150 ish frames.
+> ![Example of an appropriate length animation on small screen](./RigPictures/NiceTimeline.png "Picture of an appropriate length animation on small screen")
+
 Think of creative ways to maximise animation data. Mirroring animations and providing variances give the system more animation data to pull from.
 
-> Example: A tip is to animate a character walking in a spiral for ground locomotion. Start with a one second loop, and loop the animation as the character follows a tightening spline/spiral. To maximize animation data mirror the animation, but not the spiral. Then mirror the spiral and mirrored the walk cycle again. This gives us a lot of animation data, specially turning/walking in different directions, with a one second walk cycle.
+> Example: A tip is to animate a character walking in a spiral for ground locomotion. Start with a one second loop, and loop the animation as the character follows a tightening spline/spiral. To maximize animation data mirror the animation, but not the spiral. Then mirror the spiral and mirrored the walk cycle again. This gives us a lot of animation data, specially turning/walking in different directions, with a one second walk cycle. The tighter you make the spiral, the tighter the turning radius for the character.
 
 ![Example of spiral-animation](./RigPictures/AnimationSpiral.png "Picture of a character walking along a spiral")
 
 Also think of creative ways to “combine” sets of animations. Another one of our examples is a looped crouched walking animation can become anticipation for a jump, if only played for a short while before the jump.
 
-Return to [front page](./README.md).
+Return to [front page](./README.md)
