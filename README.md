@@ -6,6 +6,6 @@ The documents are categorized loosely by what person/professional might need to 
 
 # Documents
 
-[Rig & Animation specs](./RigAndAnimationSpecs.md) - For the rigger & animator. <br>
+[Character rig & Animation specs](./RigAndAnimationSpecs.md) - For the rigger & animator. <br>
 [Setup Manual](./SetupManual.md) - For the slightly technical Unreal implementation <br>
 [User Guide](./UserGuide.md) - For the animator/person using unreal to iterate. <br>
