@@ -4,7 +4,19 @@ Return to [front page](./README.md).
 
 ## Table of contents
 
-Markdown arguing here, wont create the table of contents.
+- [User Manual - Unreal Engine motion matching plugin](#user-manual---unreal-engine-motion-matching-plugin)
+  - [Table of contents](#table-of-contents)
+  - [Intro to setup](#intro-to-setup)
+    - [Plugin contains](#plugin-contains)
+  - [Unreal Input setup](#unreal-input-setup)
+  - [Character setup](#character-setup)
+  - [Event graph character setup](#event-graph-character-setup)
+  - [Motion field setup](#motion-field-setup)
+  - [Adding animations](#adding-animations)
+  - [Animation Blueprint setup](#animation-blueprint-setup)
+  - [Animation blueprint event graph setup](#animation-blueprint-event-graph-setup)
+  - [Multiple Motion Fields per Character](#multiple-motion-fields-per-character)
+  - [Debug hud setup](#debug-hud-setup)
 
 ## Intro to setup
 

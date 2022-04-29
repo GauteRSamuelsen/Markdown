@@ -2,10 +2,14 @@
 
 Return to [front page](./README.md).
 
+## Table of contents
+
 - [User Guide](#user-guide)
-- [Intro to useage](#intro-to-useage)
+  - [Table of contents](#table-of-contents)
+  - [Intro to useage](#intro-to-useage)
   - [Tag System](#tag-system)
   - [Animation iteration & Debug HUD](#animation-iteration--debug-hud)
+  - [Some common troubleshooting tips](#some-common-troubleshooting-tips)
   - [Terminology](#terminology)
   - [Motion Matching Node in animation blueprints](#motion-matching-node-in-animation-blueprints)
 
@@ -19,7 +23,7 @@ The tag system works by “dividing” the animation into the set time steps of 
 
 A part of the motion matching system is giving away absolute control over animations to an algorithm, so to yield the best results, curation of the animations is important. By selectively limiting the searching points of the algorithm it can pick visually better results. Tagging the animations can also be used to stop repeated picking of animations. If a character stutters during a turn or is stuck in a loop of animations, putting a ignore tag on it will keep it out of the searching process.
 
-![Example of motion field Tag Timeline](./UsePictures/TagTimeline.png "Picture of motion field's set properties panel")
+[![Example of motion field Tag Timeline](./UsePictures/TagTimeline.png)](https://github.com/GauteRSamuelsen/MotionMatching-Documentation/blob/main/UsePictures/TagTimeline.png)
 
 > In the animation blueprint you need to specify what tags to look for and what tags to ignore.
 > ![Example of tag system in animation blueprint](./UsePictures/SpecifyTags.png "Picture of tag system in animation blueprint")

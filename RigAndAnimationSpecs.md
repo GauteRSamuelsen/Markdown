@@ -2,6 +2,13 @@
 
 Return to [front page](./README.md).
 
+## Table of contents
+
+- [Character rig & Animation guide](#character-rig--animation-guide)
+  - [Table of contents](#table-of-contents)
+  - [Character rig requirements](#character-rig-requirements)
+  - [Animation guide](#animation-guide)
+
 ## Character rig requirements
 
 The character rig needs to have a “root”-bone. This root bone needs to have root motion, basically that the character moves through the scene and is not animated in place. The root bone is used by the motion matching system to have a character transform to match current skeletal positions against possible transitinos.
