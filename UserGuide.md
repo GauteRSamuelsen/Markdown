@@ -26,8 +26,8 @@ A part of the motion matching system is giving away absolute control over animat
 [![Example of motion field Tag Timeline](./UsePictures/TagTimeline.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/UsePictures/TagTimeline.png)
 
 > In the animation blueprint you need to specify what tags to look for and what tags to ignore.
-> ![Example of tag system in animation blueprint](./UsePictures/SpecifyTags.png "Picture of tag system in animation blueprint")
-> In this example case, the ignore has tag index 0 and prefer has tag index 1
+> [![Example of tag system in animation blueprint](./UsePictures/SpecifyTags.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/UsePictures/SpecifyTags.png)
+> In this example case, the ignore has tag index 0 and prefer has tag index 1.
 
 ## Animation iteration & Debug HUD
 
@@ -39,7 +39,7 @@ The hud shows three important debug info: The animation name, the timestep it ha
 
 Working with the tag system as well can improve the visual results. Even given all beautiful frames of animation the context in which they are chosen dynamically can single out transitions and selections that don’t flow well together. Giving the motion matching “preferred” frames and frames to ignore can aid in its selection. This "micro" curation can be used to avoid playing the same few frames of animations over and over, as well as characters stuck in poses.
 
-![Example of the debug hud](./UsePictures/DebugHUD.png "Picture of the debug hud")
+[![Example of the debug hud](./UsePictures/DebugHUD.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/UsePictures/DebugHUD.png)
 
 ## Some common troubleshooting tips
 
@@ -63,7 +63,7 @@ Animation tags - A way to inform the system of how to handle frames of animation
 
 ## Motion Matching Node in animation blueprints
 
-![Example of the debug hud](./UsePictures/MotionMatchingNode.png "Picture of the debug hud")
+[![Example of the debug hud](./UsePictures/MotionMatchingNode.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/UsePictures/MotionMatchingNode.png)
 
 - Desired Trajectory - Input of Motion Matching Goal. What transform is the system aiming to match to.
 - Responsivness -
