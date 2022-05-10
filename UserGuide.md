@@ -7,6 +7,7 @@ Return to [front page](./README.md).
 - [User Guide](#user-guide)
   - [Table of contents](#table-of-contents)
   - [Intro to useage](#intro-to-useage)
+  - [Motion field setup](#motion-field-setup)
   - [Tag System](#tag-system)
   - [Animation iteration & Debug HUD](#animation-iteration--debug-hud)
   - [Some common troubleshooting tips](#some-common-troubleshooting-tips)
@@ -17,9 +18,31 @@ Return to [front page](./README.md).
 
 This is a guide from working with the system in unreal. This document is meant to help iterate and improve the animation quality of a system that is already set up and running.
 
+## Motion field setup
+
+The “Motion field” is a custom data structure, the motion field becomes a database over the “available” animations for the motion matching system. The Motion Field stores the positions, rotations and velocities of the root- and selected skeletal bones, sampled from the pre-made animations provided to it.
+
+To create a Motion Field you right click in the content browser and choose animation -> Motion Field.
+
+[![Where to find motion fields](./SetupPictures/MotionFieldSetup.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/MotionFieldSetup.png)
+
+When creating, follow the prompts and create the Motion Field based on the skeleton and the tracked bones you want. The system automatically uses the “root” bone of the skeleton, but you can select additional bones.
+
+[![Example settings for motion field setup](./SetupPictures/MotionFieldSettings.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/MotionFieldSettings.png)
+
+If you have a limited or only want to test functionality, select few or no motion bones to debug the system.
+For a “normal” amount of animation data, selecting the two feet yields good results.
+Feel free to experiment further with this. If you have a huge set of data, for example with motion capture data, then selecting the hip and or neck bone might yield exceptional results.
+When creating motion fields for four or multiple legged characters, tracking the front two legs seems to yield good results for all the legs, but experiment.
+
+> Note/bug
+> If the character does not appear in the motion field. Place an animation asset with the skeletal mesh you want to create a Motion Field of in a game-scene.
+
 ## Tag System
 
 The tag system works by “dividing” the animation into the set time steps of the Motion Field. When the "tag” is red, it is selected, and white de-selected. When the timeline below is added to the “tags to ignore” function in the motion matching node in the animation blueprint, the motion matching will ignore animations from about frame 105 to 120.
+
+> A tag with cost "0.0" will always be ignored and removed from the system. 
 
 A part of the motion matching system is giving away absolute control over animations to an algorithm, so to yield the best results, curation of the animations is important. By selectively limiting the searching points of the algorithm it can pick visually better results. Tagging the animations can also be used to stop repeated picking of animations. If a character stutters during a turn or is stuck in a loop of animations, putting a ignore tag on it will keep it out of the searching process.
 
@@ -44,6 +67,8 @@ Working with the tag system as well can improve the visual results. Even given a
 ## Some common troubleshooting tips
 
 - If the character is not moving in the scene when it should, try increasing movement speed.
+- Idle animations can be tricky, if they play poorly try making an idle field which tracks the parts of the body actually moving during the idle. For example the head and or tail might move more than the feet during an idle. Highlighting the "poses" using the tag system might help, but can also produce jittery/unatural looking motion.
+- If the "add an animation" button in the motion field editor does not work and crashes the engine: Double check that there are valid skeletons on all imported animations, for all characters. Hopefully only the latest imports have failed. Retargeting/re-importing fixes it.
 
 ## Terminology
 

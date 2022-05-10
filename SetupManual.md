@@ -7,7 +7,7 @@ Return to [front page](./README.md).
 - [User Manual - Unreal Engine motion matching plugin](#user-manual---unreal-engine-motion-matching-plugin)
   - [Table of contents](#table-of-contents)
   - [Intro to setup](#intro-to-setup)
-    - [Plugin contains](#plugin-contains)
+  - [Plugin contains](#plugin-contains)
   - [Unreal Input setup](#unreal-input-setup)
   - [Character setup](#character-setup)
   - [Event graph character setup](#event-graph-character-setup)
@@ -26,13 +26,13 @@ Start by importing the Motion Matching plugin into Unreal Engine. For now the pl
 
 Unreal has this [documentation](https://docs.unrealengine.com/5.0/en-US/working-with-plugins-in-unreal-engine/) for Unreal 5 - but it should apply to 4.27 as well.
 
-### Plugin contains
+## Plugin contains
 
 - MotCharacter - character class
 - Motion Field - “database” and editor-window
 - Motion Matching node for animation blueprints
 
-> See also documents regarding Character rig and Animation specs & User guide.
+> See also documents regarding [Character rig and Animation specs](./RigAndAnimationSpecs.md) & [User guide](./UserGuide.md).
 
 ## Unreal Input setup
 
