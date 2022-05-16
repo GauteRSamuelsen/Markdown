@@ -71,7 +71,7 @@ Another tip is visualising the input.
 
 ### NPC Character setup
 
-Is working in using the same principals, but with some differnt stepss. Instead of the user providing input, Unreals navmesh and pathing system provides the input.
+Is working in using the same principals, but with some differnt steps. Instead of the user providing input, Unreals navmesh and pathing system provides the input.
 
 A lot of this will be picture of blueprints loosely categorized by function. Not all of these features are necessary, but might prove useful as a basis for further enhancements. The first picture is the entirety of the setup, but also more detailed pictures are provided.
 
