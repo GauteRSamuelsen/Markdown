@@ -10,6 +10,7 @@ Return to [front page](./README.md).
   - [Plugin contains](#plugin-contains)
   - [Unreal Input setup](#unreal-input-setup)
   - [Character setup](#character-setup)
+    - [NPC Character setup](#npc-character-setup)
   - [Event graph character setup](#event-graph-character-setup)
   - [Motion field setup](#motion-field-setup)
   - [Adding animations](#adding-animations)
@@ -51,6 +52,28 @@ In the Unreal Engine content browser:
 [![Example of character assets needed](./SetupPictures/CharacterSetup.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/CharacterSetup.png)
 
 [![Example of character blueprint setup](./SetupPictures/CharacterBlueprintSetup.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/CharacterBlueprintSetup.png)
+
+### NPC Character setup
+
+Is mainly the same, but with some extra steps. Instead of the user providing input, Unreals navmesh and pathing system provides the input.
+
+A lot of this will be picture of blueprints loosely categorized by function. Not all of these features are necessary, but might prove useful as a basis for further enhancements. The first picture is the entirety of the setup, but also more detailed pictures are provided.
+
+[![Picture of overview](./SetupPictures/NpcBlueprintOverview.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/NpcBlueprintOverview.png)
+
+[![Picture of NPC-variables](./SetupPictures/ExampleOfNPCvariables.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/ExampleOfNPCvariables.png)
+
+[![Picture of Target along spline setup](./SetupPictures/SplineTargeting.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/SplineTargeting.png)
+
+[![Picture of visualization of spline target and toggle for various goals](./SetupPictures/VisualiseSplineTargetAndTogglesForGoal.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/VisualiseSplineTargetAndTogglesForGoal.png)
+
+[![Picture of NPC Actor Path logic](./SetupPictures/ActorPathLogic.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/ActorPathLogic.png)
+
+[![Picture of visualization of path goals](./SetupPictures/VisualisePathGoals.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/VisualisePathGoals.png)
+
+[![Picture of the build goal and give input direction](./SetupPictures/BuildGoalAndInputDirection.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/BuildGoalAndInputDirection.png)
+
+[![Picture of visualization of direction for NPC](./SetupPictures/DrawInputDirection.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/DrawInputDirection.png)
 
 ## Event graph character setup
 
