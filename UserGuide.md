@@ -38,6 +38,19 @@ When creating motion fields for four or multiple legged characters, tracking the
 > Note/bug
 > If the character does not appear in the motion field. Place an animation asset with the skeletal mesh you want to create a Motion Field of in a game-scene.
 
+## Adding animations
+
+In the “Motion Field editor” click the button to the right, “Add an animation”. Select the animations you want the character to be able to pull from and use in-game. Grouping motion fields by “state” is a good idea to organize and get ideal results. “Macro” curation of animations is talked about later. But for now grouping motion fields by idle/walk, jumping, climbing, and running makes sure you get the expected animations for the different states.
+
+[![Example of for motion field editor](./SetupPictures/AddAnimation.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/AddAnimation.png)
+
+To edit how granular and how many motion keys(animation poses) you want the database to sample click on the “Set properties” button. A good starting value is 0,1. The smaller the number, the more samples to pull from and the larger the data-set becomes. A higher number leaves fewer points for the motion matching to match against, and can result in poor animation quality.
+A limitation of the system is that the tagging part of it only tags in motion steps, not to actual frames of animation. A smaller timestep means more precision and better results, but can be a bit cluttered and difficult to “read”, especially on smaller screen sizes.
+
+[![Example of for motion field "Set properties"](./SetupPictures/SetProperties.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/SetProperties.png)
+
+When the properties are set, and animations imported, click “ProcessAll”, and the Motion Field is ready for use. For the character to animate, the animation blueprint motion matching node needs to know what motion field to pull from.
+
 ## Tag System
 
 The tag system works by “dividing” the animation into the set time steps of the Motion Field. When the "tag” is red, it is selected, and white de-selected. When the timeline below is added to the “tags to ignore” function in the motion matching node in the animation blueprint, the motion matching will ignore animations from about frame 105 to 120.
