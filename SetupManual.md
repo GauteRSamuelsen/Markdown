@@ -53,28 +53,6 @@ In the Unreal Engine content browser:
 
 [![Example of character blueprint setup](./SetupPictures/CharacterBlueprintSetup.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/CharacterBlueprintSetup.png)
 
-### NPC Character setup
-
-Is mainly the same, but with some extra steps. Instead of the user providing input, Unreals navmesh and pathing system provides the input.
-
-A lot of this will be picture of blueprints loosely categorized by function. Not all of these features are necessary, but might prove useful as a basis for further enhancements. The first picture is the entirety of the setup, but also more detailed pictures are provided.
-
-[![Picture of overview](./SetupPictures/NpcBlueprintOverview.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/NpcBlueprintOverview.png)
-
-[![Picture of NPC-variables](./SetupPictures/ExampleOfNPCvariables.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/ExampleOfNPCvariables.png)
-
-[![Picture of Target along spline setup](./SetupPictures/SplineTargeting.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/SplineTargeting.png)
-
-[![Picture of visualization of spline target and toggle for various goals](./SetupPictures/VisualiseSplineTargetAndTogglesForGoal.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/VisualiseSplineTargetAndTogglesForGoal.png)
-
-[![Picture of NPC Actor Path logic](./SetupPictures/ActorPathLogic.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/ActorPathLogic.png)
-
-[![Picture of visualization of path goals](./SetupPictures/VisualisePathGoals.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/VisualisePathGoals.png)
-
-[![Picture of the build goal and give input direction](./SetupPictures/BuildGoalAndInputDirection.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/BuildGoalAndInputDirection.png)
-
-[![Picture of visualization of direction for NPC](./SetupPictures/DrawInputDirection.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/DrawInputDirection.png)
-
 ## Event graph character setup
 
 In the event graph for the character, the most important part is feeding the motion matching algorithm a target location. The motion matching goal will be the location the system moves towards. This becomes a moving target whenever the player starts moving.
@@ -90,6 +68,42 @@ Another tip is visualising the input.
 
 > Visualizing the input in the game-scene is also a great idea and can be done like this after the goal is built.
 > [![Example of character eventgraph setup](./SetupPictures/CharInputVis.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/CharInputVis.png)
+
+### NPC Character setup
+
+Is working in using the same principals, but with some differnt stepss. Instead of the user providing input, Unreals navmesh and pathing system provides the input.
+
+A lot of this will be picture of blueprints loosely categorized by function. Not all of these features are necessary, but might prove useful as a basis for further enhancements. The first picture is the entirety of the setup, but also more detailed pictures are provided.
+
+[![Picture of overview](./SetupPictures/NpcBlueprintOverview.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/NpcBlueprintOverview.png)
+
+Variables used for this implementation
+
+[![Picture of NPC-variables](./SetupPictures/ExampleOfNPCvariables.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/ExampleOfNPCvariables.png)
+
+Used to set the target along a spline and regulate its speed based on character distance from it. Stops if far enough away.
+
+[![Picture of Target along spline setup](./SetupPictures/SplineTargeting.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/SplineTargeting.png)
+
+Visualizes goal point along spline and toggles between different goals for the NPC.
+
+[![Picture of visualization of spline target and toggle for various goals](./SetupPictures/VisualiseSplineTargetAndTogglesForGoal.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/VisualiseSplineTargetAndTogglesForGoal.png)
+
+NPC pathing logic. Integrated into unreals navmesh and gives the input direction towards next point in path.
+
+[![Picture of NPC Actor Path logic](./SetupPictures/ActorPathLogic.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/ActorPathLogic.png)
+
+Visualizes the path in scene as vertical red line.
+
+[![Picture of visualization of path goals](./SetupPictures/VisualisePathGoals.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/VisualisePathGoals.png)
+
+How to build the motion matching goal for the NPC and give input direction from the path-logic.
+
+[![Picture of the build goal and give input direction](./SetupPictures/BuildGoalAndInputDirection.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/BuildGoalAndInputDirection.png)
+
+Visualizes the input from the npc towards its goal.
+
+[![Picture of visualization of direction for NPC](./SetupPictures/DrawInputDirection.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/SetupPictures/DrawInputDirection.png)
 
 ## Motion field setup
 
