@@ -8,6 +8,7 @@ Return to [front page](./README.md).
   - [Table of contents](#table-of-contents)
   - [Intro to useage](#intro-to-useage)
   - [Motion field setup](#motion-field-setup)
+  - [Adding animations](#adding-animations)
   - [Tag System](#tag-system)
   - [Animation iteration & Debug HUD](#animation-iteration--debug-hud)
   - [Some common troubleshooting tips](#some-common-troubleshooting-tips)
