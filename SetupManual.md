@@ -10,7 +10,7 @@ Return to [front page](./README.md).
   - [Plugin contains](#plugin-contains)
   - [Unreal Input setup](#unreal-input-setup)
   - [Character setup](#character-setup)
-    - [NPC Character setup](#npc-character-setup)
+  - [NPC Character setup](#npc-character-setup)
   - [Event graph character setup](#event-graph-character-setup)
   - [Motion field setup](#motion-field-setup)
   - [Adding animations](#adding-animations)
