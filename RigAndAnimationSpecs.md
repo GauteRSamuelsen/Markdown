@@ -13,6 +13,8 @@ Return to [front page](./README.md).
 
 The character rig needs to have a “root”-bone. This root bone needs to have root motion, basically that the character moves through the scene and is not animated in place. The root bone is used by the motion matching system to have a character transform to match current skeletal positions against possible transitinos. The first bone in the hierarchy in Unreal needs to be the root joint, otherwise the character will not animate properly and rotations applied weirdly.
 
+> The root joint does not need to be called anything spesific like "root", but needs to have the animation data to move the character about in the scene, and no rotation data.
+
 > If your character does not have a root bone, look into plugins/work-arounds to add one in for example Maya/Blender or your 3D software of choice.
 
 [![Example of character rig hierarchy](./RigPictures/RootBone.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/RigPictures/RootBone.png)
