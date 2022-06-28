@@ -78,12 +78,13 @@ Working with the tag system as well can improve the visual results. Even given a
 
 [![Example of the debug hud](./UsePictures/DebugHUD.png)](https://gautersamuelsen.github.io/MotionMatching-Documentation/UsePictures/DebugHUD.png)
 
-## Some common troubleshooting tips
+## Tips n' tricks
 
 - If the character is not moving in the scene when it should, try increasing movement speed.
-- Idle animations can be tricky, if they play poorly try making an idle field which tracks the parts of the body actually moving during the idle. For example the head and or tail might move more than the feet during an idle. Highlighting the "poses" using the tag system might help, but can also produce jittery/unatural looking motion.
-- If the "add an animation" button in the motion field editor does not work and crashes the engine: Double check that there are valid skeletons on all imported animations, for all characters. Hopefully only the latest imports have failed. Retargeting/re-importing fixes it.
+- Idle animations can be tricky, if they play poorly try making an idle field which tracks the parts of the body that actually moving during the idle. For example the head and or tail might move more than the feet during an idle. Highlighting the "poses" using the tag system might help, but can also produce jittery/unatural looking motion.
+- If the "add an animation" button in the motion field editor does not work and crashes the engine: Double check that all animation sequences in unreal have valid skeletons, for all characters. Retargeting/re-importing fixes missing skeleton and allows for adding animations.
 - Characters don't need their own unique motion fields for the same content, but the debug-hud might give incorrect info or even crash the entire project if there are multiple characters using the same motion field while debugging.
+- The first second or so of the animation sequence is not used by the motion matching implementation. If there is a single animation cycle that is very short and no animations are picked. Appending 30 frames at the beginning and end of the animation in Unreals animation editor can be a quick fix.
 
 ## Terminology
 
